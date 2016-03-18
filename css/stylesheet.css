@@ -1,0 +1,29 @@
+body {
+    background-color: lightblue;
+}
+
+#calculusBlock {
+    margin-left: 25%;
+    margin-top: 15%;
+}
+
+#calculusBlock .functionBlock {
+    margin: 20px;
+}
+
+#calculusBlock .errorBlock {
+    margin: 20px;
+}
+
+#calculusBlock .exampleLabel {
+    color: lightslategray;
+}
+
+#calculusBlock .calculateButton {
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 15px;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
