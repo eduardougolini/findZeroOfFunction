@@ -1,6 +1,6 @@
 <?php
 
-    use CordasService;
+    include './CordasService.php';
 
     $method = $_POST["method"];
     $userFunction = $_POST["userFunction"];

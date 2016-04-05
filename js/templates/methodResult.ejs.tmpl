@@ -2,19 +2,13 @@
 
 <h1>Tabela de resultados</h1>
 
-<table class="resultTable">
+<table border="1" class="resultTable">
     <tr>
+        <th>N</th>
         <th>A</th>
         <th>B</th>
         <th>xn</th>
         <th>f(x)</th>
     </tr>
-    <% for(var i = 0; i < data.length; i++) { %>
-        <tr>
-            <td>data[i].a</td>
-            <td>data[i].b</td>
-            <td>data[i].xn</td>
-            <td>data[i].fx</td>
-        </tr>     
-    <% } %>
+        <%= data %>
 </table>

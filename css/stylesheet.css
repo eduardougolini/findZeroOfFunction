@@ -28,3 +28,7 @@ body {
     cursor: pointer;
 }
 
+#calculusBlock .resultBlock {
+    margin-top: 100px;
+    position: absolute;
+}

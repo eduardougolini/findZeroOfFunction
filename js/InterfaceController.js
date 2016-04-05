@@ -10,14 +10,14 @@ $(document).ready(function() {
         var superiorLimit = $('#calculusBlock .superiorLimit').val();
         
         
-        $.post("Controller/CalculatorController.php",{
+        $.post("CalculatorController.php",{
             method: method,
             userFunction: functionVal,
             userError: errorVal,
             inferiorLimit: inferiorLimit,
             superiorLimit: superiorLimit
         }, function(data) {
-            var ejsData = new EJS({url: '/js/templates/method.ejs.tmpl'});
+            var ejsData = new EJS({url: 'js/templates/methodResult.ejs.tmpl'});
             $("#calculusBlock .resultBlock").html(ejsData.render({
                 data: data
             }));
