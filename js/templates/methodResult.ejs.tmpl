@@ -3,12 +3,23 @@
 <h1>Tabela de resultados</h1>
 
 <table border="1" class="resultTable">
-    <tr>
-        <th>N</th>
-        <th>A</th>
-        <th>B</th>
-        <th>xn</th>
-        <th>f(x)</th>
-    </tr>
+    <% if ($('#calculusBlock .typeSelector option:selected').val() ==  "newton" ) { %>
+        <tr>
+            <th>N</th>
+            <th>xn</th>
+            <th>f(x)</th>
+            <th>f'(x)</th>
+        </tr>
+    <% } else { %>
+        <tr>
+            <th>N</th>
+            <th>A</th>
+            <th>B</th>
+            <th>xn</th>
+            <th>f(x)</th>
+        </tr>
+    <% } %>
+    
         <%= data %>
+        
 </table>

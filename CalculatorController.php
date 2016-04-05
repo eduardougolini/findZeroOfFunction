@@ -2,7 +2,8 @@
 
     include './CordasService.php';
     include './BisseccionService.php';
-
+    include './NewtonService.php';
+    
     $method = $_POST["method"];
     $userFunction = $_POST["userFunction"];
     $userError = $_POST["userError"];
@@ -16,5 +17,5 @@
     } else if ($method === "pegaso") {
         //pegaso
     } else {
-        //newton
+        return NewtonService::calculate($userFunction, $inferiorLimit, $userError);
     }
