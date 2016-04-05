@@ -1,6 +1,7 @@
 <?php
 
     include './CordasService.php';
+    include './BisseccionService.php';
 
     $method = $_POST["method"];
     $userFunction = $_POST["userFunction"];
@@ -9,7 +10,7 @@
     $superiorLimit = $_POST["superiorLimit"];
 
     if ($method === "bisseccao") {
-        //bisseccao
+        return BisseccionService::calculate($userFunction, $inferiorLimit, $superiorLimit, $userError);
     } else if ($method === "cordas") {
         return CordasService::calculate($userFunction, $inferiorLimit, $superiorLimit, $userError);
     } else if ($method === "pegaso") {

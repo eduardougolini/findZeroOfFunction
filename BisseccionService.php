@@ -1,25 +1,26 @@
 <?php
 
-include './FunctionService.php';
+//include './FunctionService.php';
 
 /**
- * Description of CordasService
+ * Description of BisseccionService
  *
  * @author eduardo
  */
-class CordasService extends FunctionService {
+class BisseccionService extends FunctionService {
+    
     public static function calculate($function, $inferiorLimit, $superiorLimit, $error) {
         
         $fx = PHP_INT_MAX;
         $a = $inferiorLimit;
         $b = $superiorLimit;
         $count = 0;
-                
+        
         $results = [];
         
         while ($fx > $error || $fx < -$error) {
             
-            $xn = self::calculateXn($function, $a, $b);
+            $xn = self::calculateXn($a, $b);
             $fx = self::calculateFunction($function, $xn);
             
             $results[$count] = "<tr><td>$count</td><td>$a</td><td>$b</td><td>$xn</td><td>$fx</td></tr>";
@@ -42,11 +43,7 @@ class CordasService extends FunctionService {
         echo $returnString;
     }
     
-    private static function calculateXn($function, $inferiorLimit, $superiorLimit) {
-                
-        $fa = FunctionService::calculateFunction($function, $inferiorLimit);
-        $fb = FunctionService::calculateFunction($function, $superiorLimit);
-        
-        return $inferiorLimit - ($fa / ($fb - $fa)) * ($superiorLimit - $inferiorLimit);
+    private static function calculateXn($inferiorLimit, $superiorLimit) {
+        return ($inferiorLimit + $superiorLimit) / 2;
     }
 }
