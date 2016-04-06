@@ -30,6 +30,11 @@ class BisseccionService extends FunctionService {
             }
             
             $count++;
+            
+            if ($count > 200) {
+                break;
+            }
+            
         }
         
         $returnString = '';

@@ -31,6 +31,11 @@ class CordasService extends FunctionService {
             }
             
             $count++;
+            
+            if ($count > 200) {
+                break;
+            }
+            
         }
         
         $returnString = '';

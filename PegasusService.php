@@ -38,6 +38,11 @@ class PegasusService extends FunctionService {
             $fb = $fx;
             
             $count++;
+            
+            if ($count > 200) {
+                break;
+            }
+            
         }
         
         $returnString = '';

@@ -26,6 +26,11 @@ class NewtonService extends FunctionService {
             $xn = self::calculateXn($xn, $fx, $derivativeOfFx);
            
             $count++;
+            
+            if ($count > 200) {
+                break;
+            }
+            
         }
         
         $returnString = '';
