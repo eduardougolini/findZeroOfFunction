@@ -22,9 +22,9 @@ and open the template in the editor.
             </div>
             
             <div class="limitBlock">
-                <label>Limite Inferior</label>
+                <label>Limite Inferior(a)</label>
                 <input class="inferiorLimit" type="number" />
-                <label>Limite Superior</label>
+                <label>Limite Superior(b)</label>
                 <input class="superiorLimit" type="number" />
             </div>
             

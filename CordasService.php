@@ -34,8 +34,8 @@ class CordasService extends FunctionService {
         }
         
         $returnString = '';
-        foreach ($results as $json) {
-            $returnString = $returnString . $json;
+        foreach ($results as $result) {
+            $returnString = $returnString . $result;
         }
         
         
